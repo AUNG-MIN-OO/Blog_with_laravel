@@ -137,6 +137,13 @@
     overflow: scroll;
 }
 
+.swal2-container{
+    z-index: 2001!important;
+}
+
+.table td,.table th{
+    vertical-align: middle!important;
+}
 
 
 

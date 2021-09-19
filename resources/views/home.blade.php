@@ -18,8 +18,18 @@
                     <button class="test btn btn-primary">test</button>
 
                         <br>
-                    {{ Request::url() }}
+                    {{ \Illuminate\Support\Facades\Request::url() }}
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    {{Base::$name}}
+                    {{Base::$description}}
 
+                    {{env("APP_NAME")}}
+                    {{env("APP_ENV")}}
+                        <br>
+                    {{date('Y-m-d h:i:s')}}
                 </div>
             </div>
         </div>
