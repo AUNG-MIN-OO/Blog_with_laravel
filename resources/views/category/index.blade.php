@@ -39,7 +39,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach(\App\Category::with("getUser")->get() as $category)
+                        @forelse(\App\Category::with("getUser")->get() as $category)
                             <tr>
                                 <td>{{$category->id}}</td>
                                 <td>{{$category->title}}</td>
@@ -62,7 +62,11 @@
                                     <span class="small">{{$category->created_at->format("H:i A")}}</span>
                                 </td>
                             </tr>
-                        @endforeach
+                        @empty
+                            <tr>
+                                <td class="text-center font-weight-bold">There is not data yet!</td>
+                            </tr>
+                        @endforelse
                         </tbody>
                     </table>
                 </div>

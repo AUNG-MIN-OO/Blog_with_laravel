@@ -16,15 +16,15 @@
 
             <x-menu-spacer></x-menu-spacer>
 
-            <x-menu-title title="My Test Menu"></x-menu-title>
-            <x-menu-item name="Create Item" class="feather-plus-circle" ></x-menu-item>
-            <x-menu-item name="Item List" class="feather-list" counter="50"></x-menu-item>
+            <x-menu-title title="Article Manager"></x-menu-title>
+            <x-menu-item name="Create Article" class="feather-plus-circle" link="{{route('article.create')}}" ></x-menu-item>
+            <x-menu-item name="Article List" class="feather-list" counter="50" link="{{route('article.index')}}"></x-menu-item>
 
             <x-menu-spacer></x-menu-spacer>
 
-            <x-menu-title title="Article Manager"></x-menu-title>
+            <x-menu-title title="Category Manager"></x-menu-title>
             <x-menu-item name="Manage Category" class="feather-layers" link="{{route('category.index')}}"></x-menu-item>
-            <x-menu-item name="Item List" class="feather-list" counter="50"></x-menu-item>
+
 
 
             <x-menu-spacer></x-menu-spacer>

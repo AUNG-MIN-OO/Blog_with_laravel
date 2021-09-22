@@ -30,6 +30,7 @@
                     {{env("APP_ENV")}}
                         <br>
                     {{date('Y-m-d h:i:s')}}
+                        <br>
                 </div>
             </div>
         </div>
