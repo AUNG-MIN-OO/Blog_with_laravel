@@ -111,6 +111,6 @@ class ArticleController extends Controller
     {
         $article= Article::find($id);
         $article->delete();
-        return redirect()->route('article.index')->with('toast','Article has been deleted');
+        return redirect()->route('article.index',['page'=>request()->page])->with('toast','Article has been deleted');
     }
 }

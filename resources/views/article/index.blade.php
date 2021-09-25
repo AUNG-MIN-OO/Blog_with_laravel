@@ -56,7 +56,7 @@
                                     <div class="d-flex">
                                         <a href="{{route('article.show',$article->id)}}" class="btn btn-success mr-1"><i class="feather-eye"></i></a>
                                         <a href="{{route('article.edit',$article->id)}}" class="btn btn-warning mr-1"><i class="feather-edit-3"></i></a>
-                                        <form action="{{route('article.destroy',$article->id)}}" method="post">
+                                        <form action="{{route('article.destroy',[$article->id,'page'=>request()->page])}}" method="post">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger article_delete"><i class="feather-trash-2"></i></button>
@@ -79,7 +79,7 @@
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-between">
-                        {{ $articles->links() }}
+                        {{ $articles->appends(request()->all())->links() }}
                         <h4 class="font-weight-bold">Total : {{$articles->total()}} pages</h4>
                     </div>
                 </div>

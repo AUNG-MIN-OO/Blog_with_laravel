@@ -21,6 +21,7 @@
                     {{ \Illuminate\Support\Facades\Request::url() }}
                         <br>
                         <br>
+                    {{route('article.index',['page'=>3])}}
                         <br>
                         <br>
                     {{Base::$name}}
