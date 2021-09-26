@@ -68,7 +68,7 @@ class ProfileController extends Controller
 
     public function changePhoto(Request $request){
         $request->validate([
-            "photo" => "required|mimetypes:image/jpeg,image/png|dimensions:ratio=1/1|file|max:2500"
+            "photo" => "required|mimetypes:image/jpeg,image/png|file|max:2500"
         ]);
         $dir="public/profile/";
 

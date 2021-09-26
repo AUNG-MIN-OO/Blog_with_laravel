@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'BlogController@index')->name('welcome');
+Route::view('/about','blog.about')->name('about');
+Route::get('/detail/{id}','BlogController@detail')->name('detail');
+Route::get('/category/{id}','BlogController@baseOnCategory')->name('baseOnCategory');
+Route::get('/owner/{id}','BlogController@baseOnOwner')->name('baseOnOwner');
+Route::get('/Date/{date}','BlogController@baseOnDate')->name('baseOnDate');
 
 Auth::routes();
 
